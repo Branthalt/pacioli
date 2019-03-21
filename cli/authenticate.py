@@ -18,6 +18,7 @@ class Settings:
         self.accountid = activeconfig.get('accountid')
         self.user_pool_id = activeconfig.get('user_pool_id')
         self.clientid = activeconfig.get('clientid')
+        self.apigatewayurl = activeconfig.get('apigatewayurl')
         self.basepath = activeconfig.get('basepath', '.')
         self.key_dir = os.path.join(self.basepath, activeconfig.get('key_dir', 'keys'))
 
