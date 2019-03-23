@@ -8,10 +8,10 @@ from authenticate import Settings
 import requests
 
 
-def post_transactions(settings, idtoken):
+def post_transactions(settings, idtoken, transaction):
     url = "{}/transaction".format(settings.apigatewayurl)
     headers = {"Authorization": idtoken}
-    response = requests.post(url, headers=headers)
+    response = requests.post(url, headers=headers, json=transaction)
     return response
 
 
@@ -25,4 +25,5 @@ if __name__ == "__main__":
     else:
         raise Exception("token file is missing")
 
-    print(post_transactions(settings, idtoken))
+    response = post_transactions(settings, idtoken)
+    print(response.body)
