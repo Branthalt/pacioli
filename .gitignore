@@ -3,6 +3,7 @@ scratchpad.py
 *.ini
 cli/keys/
 jupyter
+*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
