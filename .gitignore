@@ -4,6 +4,7 @@ scratchpad.py
 cli/keys/
 jupyter
 *.zip
+*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
